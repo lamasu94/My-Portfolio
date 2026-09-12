@@ -121,7 +121,7 @@ export default function Home() {
     <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
       <div className="flex-1 flex justify-center">
         <Image
-          src="/pic2.svggit "
+          src="/pic2.svg"
           alt="About illustration"
           width={400}
           height={400}
