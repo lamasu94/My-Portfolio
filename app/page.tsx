@@ -83,7 +83,7 @@ export default function Home() {
           <div className="w-full h-full rounded-full overflow-hidden">
             <Image
               src="/pic.jpeg"
-              alt="Hero Image"
+              alt="lama Image"
               width={400}
               height={400}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
@@ -105,57 +105,98 @@ export default function Home() {
 </div>
 
       {/* About section */}
+{/* About section */}
+<section id="about" className="bg-[#FAFAFA] py-20 px-6 md:px-16">
+  <div className="max-w-6xl mx-auto">
 
-      <section id="about" className="bg-[#FAFAFA] py-20 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto">
-          {/* Section heading */}
-          <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#6b3f8a]">
-              About
-            </h2>
-            <div className="w-16 h-1 bg-[#6b3f8a] rounded-full mt-3" />
-          </div>
+    {/* Section heading */}
+    <div className="mb-12">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-[#6b3f8a]">
+        About
+      </h2>
+      <div className="w-16 h-1 bg-[#6b3f8a] rounded-full mt-3" />
+    </div>
 
-          {/* Content: illustration left, text right */}
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            {/* Left: illustration */}
-            <div className="flex-1 flex justify-center">
-              <Image
-                src="/pic2.svg"
-                alt="About illustration"
-                width={400}
-                height={400}
-                className="w-full max-w-sm h-auto"
-              />
-            </div>
+    {/* Top: illustration + intro paragraph */}
+    <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
+      <div className="flex-1 flex justify-center">
+        <Image
+          src="/pic2.svggit "
+          alt="About illustration"
+          width={400}
+          height={400}
+          className="w-full max-w-sm h-auto"
+        />
+      </div>
+      <div className="flex-1">
+        <p className="text-[#3a3a3a] text-lg leading-relaxed">
+          I'm Lama Suleiman, a final-year Software Engineering student and
+          full-stack developer with a passion for building systems that solve
+          real problems. I enjoy working across the entire stack — from
+          designing clean, role-based architectures on the backend to
+          crafting intuitive interfaces on the frontend.
+        </p>
+      </div>
+    </div>
 
-            {/* Right: paragraph */}
-            <div className="flex-1">
-              <p className="text-[#3a3a3a] text-lg leading-relaxed mb-6">
-                I'm Lama Suleiman, a final-year Software Engineering student and
-                full-stack developer with a passion for building systems that
-                solve real problems. I enjoy working across the entire stack,
-                from designing clean, role-based architectures on the backend to
-                crafting intuitive interfaces on the frontend.
-              </p>
-              <p className="text-[#3a3a3a] text-lg leading-relaxed">
-                My experience spans inventory management systems, emergency
-                alert platforms, and predictive analytics tools using machine
-                learning. I'm currently expanding my skill set with Spring Boot
-                and SAP systems, and I thrive in fast-paced, collaborative
-                environments where clear communication and solid project
-                management make the difference between a good idea and a working
-                product.
-              </p>
-              <br />
-              <h3 className="font-bold text-[#1a1b2e] mb-2">Tech Stack</h3>
-              <span className="text-[#5c5f7a]">
-                Node.js, Next.js, React, JavaScript, MySQL, PostgreSQL.
-              </span>
-            </div>
-          </div>
+    {/* Tech Stack - moving row */}
+    <div className="mb-12">
+      <h3 className="text-xl font-bold text-[#1a1b2e] mb-4">Tech Stack</h3>
+      <div className="marquee-container">
+        <div className="marquee-track gap-4">
+          {[...["JavaScript", "React", "Next.js", "Node.js", "Express", "MySQL", "TypeScript", "Spring Boot 🌱", "SAP Systems 🌱"],
+            ...["JavaScript", "React", "Next.js", "Node.js", "Express", "MySQL", "TypeScript", "Spring Boot 🌱", "SAP Systems 🌱"]
+          ].map((skill, i) => (
+            <span
+              key={i}
+              className="whitespace-nowrap text-sm font-medium text-[#6b3f8a] bg-white border border-gray-200 shadow-sm px-4 py-2 rounded-xl"
+            >
+              {skill}
+            </span>
+          ))}
         </div>
-      </section>
+      </div>
+    </div>
+
+    {/* Soft Skills + Languages - static */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      {/* Soft Skills */}
+     {/* Soft Skills - one static row */}
+<div className="mb-12 ">
+  <h3 className="text-xl font-bold text-[#1a1b2e] mb-4">Soft Skills</h3>
+  <div className="flex flex-wrap gap-4">
+    {["Communication", "Project Management", "Workflow Tracking", "Works Well Under Pressure"].map((skill) => (
+      <span
+        key={skill}
+        className="whitespace-nowrap text-sm font-medium text-[#6b3f8a] bg-white border border-gray-200 shadow-sm px-4 py-2 rounded-xl"
+      >
+        {skill}
+      </span>
+    ))}
+  </div>
+</div>
+
+{/* Languages - one static row */}
+<div>
+  <h3 className="text-xl font-bold text-[#1a1b2e] mb-4">Languages</h3>
+  <div className="flex flex-wrap gap-4">
+    {["Arabic — Native", "English — Fluent"].map((item) => (
+      <span
+        key={item}
+        className="whitespace-nowrap text-sm font-medium text-[#6b3f8a] bg-white border border-gray-200 shadow-sm px-4 py-2 rounded-xl"
+      >
+        {item}
+      </span>
+    ))}
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+      
+      
       {/* Projects section */}
       <section id="projects" className="bg-[#FAFAFA] py-20 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
